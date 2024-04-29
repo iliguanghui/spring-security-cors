@@ -1,8 +1,13 @@
-## 快速入门：演示Spring Security表单登录
+## 快速入门：熟悉CORS机制
 
-1. 访问GET /，提示需要登录，重定向到/login
-2. 访问GET /login，获取到登录页面，里面存在一个用于提交用户名和密码的表单
-3. 访问POST /login，根据提交的用户名和密码完成认证，认证成功后重定向到/index
-4. 访问GET /index，获取到首页资源
-5. 访问POST /logout，退出系统，清空回话，重定向到/index
-6. 访问GET /index，由于没有认证，重定向到/login
+规范文档地址：https://fetch.spec.whatwg.org/
+
+规范文档比较晦涩繁杂，mdn的文档可读性更高，https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#the_http_response_headers。
+
+### 关联文档
+
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
+* https://docs.spring.io/spring-security/reference/servlet/integrations/cors.html
+* https://docs.spring.io/spring-framework/reference/web/webmvc-cors.html
+* https://github.com/spring-projects/spring-framework/blob/6.1.x/spring-web/src/main/java/org/springframework/web/cors/DefaultCorsProcessor.java
