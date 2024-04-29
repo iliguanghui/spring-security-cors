@@ -11,4 +11,4 @@ RUN sed -i 's@http://archive.ubuntu.com@https://mirrors.aliyun.com@g' /etc/apt/s
 WORKDIR /app
 COPY --from=builder /src/target/*.jar ./app.jar
 EXPOSE 8080/tcp
-ENTRYPOINT ["/bin/sh", "-c", "exec java -jar app.jar"]
+CMD ["/bin/sh", "-c", "exec java -jar app.jar"]
